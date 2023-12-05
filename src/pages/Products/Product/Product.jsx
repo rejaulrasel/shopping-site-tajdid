@@ -66,7 +66,7 @@ const Product = ({ product }) => {
       <div className="hero ">
         <div>
           <div className='flex justify-center'>
-            <img src={image} className="w-40 h-52 rounded-lg shadow-2xl" />
+            <img src={image} className="w-40 h-52 my-3 rounded-lg shadow-2xl" />
           </div>
           <hr className='
           my-2' />
@@ -76,7 +76,7 @@ const Product = ({ product }) => {
               <button onClick={() => handleDelete(id)} className='delete_button p-2'><AiOutlineDelete /></button>
             </div>
             <Rating stars={stars}></Rating>
-            <p className="">{description.slice(0, 50)}</p>
+            <p className="">{description.slice(0, 40)}</p>
           </div>
         </div>
       </div>
