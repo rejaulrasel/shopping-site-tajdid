@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 const SignupSchema = yup.object().shape({
     title: yup.string().required(),
     price: yup.number().required().positive().integer(),
-    description: yup.string().required()
+    description: yup.string().required(),
 });
 
 
@@ -18,6 +18,7 @@ const CreateProduct = () => {
 
     const {
         register,
+        reset,
         handleSubmit,
         formState: { errors }
     } = useForm({
@@ -38,6 +39,7 @@ const CreateProduct = () => {
                 title: "Product Added Succesfully",
                 icon: "success"
               });
+              reset()
     };
 
     const handleImageChange = (e) => {
@@ -60,7 +62,10 @@ const CreateProduct = () => {
 
             <form onSubmit={handleSubmit(onSubmit)}>
             <div className='flex justify-between items-center'>
+                <div>
                 <h1 className='text-2xl font-semibold'>Create Product</h1>
+                <p className='text-xs'>Upload your product photo and details here.</p>
+                </div>
                 <div >
                     <button className="btn bg-white">Cancel</button>
                     <input className="btn btn-primary ms-4 text-white submit-button" type="submit" value="CREATE" />
@@ -107,9 +112,12 @@ const CreateProduct = () => {
                         <label>Description<br /></label>
                         <p className='text-xs'>Write a short description</p>
                     </div>
+                    <div>
                     <input
                         className='pb-32 ms-52'
                         {...register("description")} placeholder='Write Something about your products...' />
+                        <p className='ms-52 leading-0'>275 characters left</p>
+                    </div>
 
                 </div>
                     {errors.description && <p className='text-red-800'>{errors.description.message}</p>}
