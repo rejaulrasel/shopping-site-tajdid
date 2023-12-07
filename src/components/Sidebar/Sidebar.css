@@ -25,3 +25,12 @@ word-wrap: break-word;
  Link > a{
     padding-top: 0;
  }
+
+ .help-center-part{
+    background-color: #F5FAFF;
+ }
+ .question-sign{
+    height: 32px;
+    width: 32px;
+    margin-top: -14px;
+ }
