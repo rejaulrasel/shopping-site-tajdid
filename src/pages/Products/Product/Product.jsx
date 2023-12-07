@@ -57,7 +57,7 @@ const Product = ({ product }) => {
             method:"DELETE"
         })
             .then(res=>res.json())
-            .then(json=>console.log(json))
+            .then(json=>console.log('Deleted Product:',json))
   }
 
 

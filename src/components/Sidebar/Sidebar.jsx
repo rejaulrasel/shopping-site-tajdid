@@ -13,7 +13,7 @@ import { FaQuestionCircle } from "react-icons/fa";
 
 const Sidebar = () => {
     return (
-        <div className='sidebar'>
+        <div className='sidebar me-2'>
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col items-center justify-center">
@@ -30,14 +30,14 @@ const Sidebar = () => {
                             <li><Link to='/'><img src={logo} alt="" /><span className='store-logo'>Tajdid Store</span></Link></li>
                             <li><Link to='/'><RiStackLine />Products
                             </Link></li>
-                            <li><Link to='/'><IoStatsChartSharp />Analytics<FiChevronDown />
+                            <li><Link to=''><IoStatsChartSharp />Analytics<FiChevronDown />
                             </Link></li>
-                            <li><Link to='/'><FiDollarSign />Billing<FiChevronDown />
+                            <li><Link to=''><FiDollarSign />Billing<FiChevronDown />
                             </Link></li>
-                            <li><Link to='/'><CiHome /> Company<FiChevronDown />
+                            <li><Link to=''><CiHome /> Company<FiChevronDown />
                             </Link></li>
-                            <li><Link to='/'><FiUser />Admin</Link></li>
-                            <li><Link to='/'><MdOutlineLogout /> Logout</Link></li>
+                            <li><Link to=''><FiUser />Admin</Link></li>
+                            <li><Link to=''><MdOutlineLogout /> Logout</Link></li>
                         </ul>
                         <div className='text-center help-center-part mx-4 mt-40'>
                             <FaQuestionCircle className='mx-auto text-primary question-sign' />

@@ -36,7 +36,7 @@ const CreateProduct = () => {
             .then(json=>console.log(json))
 
             Swal.fire({
-                title: "Product Added Succesfully",
+                title: "Product created succesfully",
                 icon: "success"
               });
               reset()

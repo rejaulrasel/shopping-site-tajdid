@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import Product from "./Product/Product";
 import { Link } from "react-router-dom";
 import { FiChevronDown } from "react-icons/fi";
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
 
 
 const Products = () => {
     const [products, setProducts] = useState([])
-    console.log(products)
     useEffect(() => {
         fetch('https://fakestoreapi.com/products?limit=6')
             .then(res => res.json())
@@ -38,6 +39,26 @@ const Products = () => {
                         key={product.id} product={product}
                     ></Product>)
                 }
+            </div>
+            <hr className="my-8" />
+            <div className="flex justify-between my-8">
+            <div className="flex items-center gap-3">
+                <FaArrowLeft/>
+                <p>Previous</p>
+                </div>
+                <div className="join">
+  <button className="join-item btn btn-active">1</button>
+  <button className="join-item btn">2</button>
+  <button className="join-item btn">3</button>
+  <button className="join-item btn">...</button>
+  <button className="join-item btn">8</button>
+  <button className="join-item btn">9</button>
+  <button className="join-item btn">10</button>
+</div>
+                <div className="flex items-center gap-3">
+                <p>Next</p>
+                <FaArrowRight/>
+                </div>
             </div>
         </div>
     );
